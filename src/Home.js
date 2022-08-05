@@ -35,11 +35,15 @@ const Home = () => {
       console.log("logged out");
     }
 
+    let buttons = (<button onClick={logOut} disabled={isAuthenticating}>Logout</button>);
+    if(!user){
+      buttons = (<button onClick={login}>Moralis Metamask Login</button>);
+    }
+
   return (
     <div>
       <h1>Moralis Hello World!</h1>
-      <button onClick={login}>Moralis Metamask Login</button>
-      <button onClick={logOut} disabled={isAuthenticating}>Logout</button>
+      {buttons}
     </div>
   );
 }
