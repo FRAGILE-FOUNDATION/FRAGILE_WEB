@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { useMoralis } from "react-moralis";
+import 'antd/dist/antd.css';
+import 'antd/dist/antd.js';
 
 const Home = () => {
 
