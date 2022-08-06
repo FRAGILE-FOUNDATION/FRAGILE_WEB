@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { useMoralis } from "react-moralis";
-import 'antd/dist/antd.css';
-import 'antd/dist/antd.js';
 import { Row, Col, Typography } from 'antd';
-import './Home.css';
-import NFT from './NFT';
+import NFT from './NFT/NFT';
 import CampaigneProgressBar  from './CampaigneProgressBar';
 import ConfirmTransactionModal from './ConfirmTransactionModal';
 

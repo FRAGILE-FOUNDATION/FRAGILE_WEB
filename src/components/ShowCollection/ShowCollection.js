@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import getCollectionNFTS from './GetNFTCollection';
-import NFT from './NFT';
+import getCollectionNFTS from '../../tools/GetNFTCollection';
+import NFT from '../NFT/NFT';
+import '../NFT/NFT.css';
 import { Row, Col } from 'antd';
 
 const ShowCollection = () => {
@@ -24,7 +25,7 @@ const ShowCollection = () => {
         NFTs = NFTData.map( x => {
             const src = 'https://ipfs.io/ipfs/'+x['image']['url'].substring(5);
             return (<Col span={6} offset={1} key={src}>
-            <NFT src={src} price={(x+1)/10}/>
+                <NFT src={src} price={(x+1)/10}/>
             </Col>)})
     }
 
