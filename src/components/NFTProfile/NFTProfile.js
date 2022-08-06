@@ -1,6 +1,7 @@
 import { Button } from "antd";
+import './NFTProfile.css';
 
-const NFT = ({src, price}) =>{
+const NFTProfile = ({src, price}) =>{
     return (
         <div className="NFT">
             <img className="nft_show" src={src}/>
@@ -12,4 +13,4 @@ const NFT = ({src, price}) =>{
         </div>);
 }
 
-export default NFT;
+export default NFTProfile;

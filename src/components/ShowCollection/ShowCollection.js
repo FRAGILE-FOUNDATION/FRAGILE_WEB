@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import getCollectionNFTS from '../../tools/GetNFTCollection';
-import NFT from '../NFT/NFT';
-import '../NFT/NFT.css';
+import NFT from '../NFTProfile/NFTProfile';
 import { Row, Col } from 'antd';
 
 const ShowCollection = () => {

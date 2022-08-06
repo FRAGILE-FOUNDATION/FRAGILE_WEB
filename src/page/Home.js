@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { useMoralis } from "react-moralis";
 import { Row, Col, Typography } from 'antd';
-import NFT from './NFT/NFT';
+import NFT from './NFTProfile/NFTProfile';
 import CampaigneProgressBar  from './CampaigneProgressBar';
 import ConfirmTransactionModal from './ConfirmTransactionModal';
 
