@@ -3,10 +3,13 @@ import './App.css';
 import { useMoralis } from "react-moralis";
 import 'antd/dist/antd.css';
 import 'antd/dist/antd.js';
-import { Row, Col } from 'antd';
+import { Row, Col, Typography } from 'antd';
 import './Home.css';
 import NFT from './NFT';
 import CampaigneProgressBar  from './CampaigneProgressBar';
+import ConfirmTransactionModal from './ConfirmTransactionModal';
+
+const { Title } = Typography;
 
 
 const Home = () => {
@@ -42,7 +45,11 @@ const Home = () => {
       console.log("logged out");
     }
 
-    let buttons = (<button onClick={logOut} disabled={isAuthenticating}>Logout</button>);
+    let buttons = (<>
+      <button onClick={logOut} disabled={isAuthenticating}>Logout</button>
+    </>);
+
+    
 
     if(!user){
       buttons = (<button onClick={login}>Moralis Metamask Login</button>);
@@ -52,20 +59,21 @@ const Home = () => {
     for (const x of Array(5).keys()) {
       X.push(x);
     }
-    console.log(X)
 
     const NFTS = X.map( x => {
       const src = "https://picsum.photos/2000/300"+x+"/";
-    return (<Col span={6} offset={1}>
+    return (<Col span={6} offset={1} key={x}>
       <NFT src={src} price={(x+1)/10}/>
     </Col>)})
 
   return (
     <div>
-      <h1>Moralis Hello World!</h1>
+      <Title>Moralis Hello World!</Title>
+      <Title level={2}></Title>
       <Col span={6} offset={13}>
         <CampaigneProgressBar amount={2.01} goalAmount={10}/>
       </Col>
+      <ConfirmTransactionModal visible={true}/>
       {buttons}
       {(user) ? user.get("ethAddress") : ''}
       <Row style={{marginBottom:'20px'}}>
