@@ -73,7 +73,7 @@ const Home = () => {
       <Col span={6} offset={13}>
         <CampaigneProgressBar amount={2.01} goalAmount={10}/>
       </Col>
-      <ConfirmTransactionModal visible={true}/>
+      {/*<ConfirmTransactionModal visible={true}/>*/}
       {buttons}
       {(user) ? user.get("ethAddress") : ''}
       <Row style={{marginBottom:'20px'}}>
