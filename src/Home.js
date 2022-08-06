@@ -5,8 +5,7 @@ import 'antd/dist/antd.css';
 import 'antd/dist/antd.js';
 import { Typography, Row, Col } from 'antd';
 import './Home.css';
-
-const { Text } = Typography;
+import NFT from './NFT';
 
 
 const Home = () => {
@@ -48,30 +47,27 @@ const Home = () => {
       buttons = (<button onClick={login}>Moralis Metamask Login</button>);
     }
 
+    let X = Array();
+    for (const x of Array(5).keys()) {
+      X.push(x);
+    }
+    console.log(X)
+
+    const NFTS = X.map( x => {
+      const src = "https://picsum.photos/2000/300"+x+"/";
+    return (<Col span={6} offset={1}>
+      <NFT src={src} price={(x+1)/10}/>
+    </Col>)})
+
   return (
     <div>
       <h1>Moralis Hello World!</h1>
       {buttons}
       {(user) ? user.get("ethAddress") : ''}
       <Row style={{marginBottom:'20px'}}>
-        <Col span={6} offset={1}>
-          <img className="nft_show" src="https://picsum.photos/2000/3001/"></img>
-        </Col>
-        <Col span={6} offset={1}>
-          <img className="nft_show" src="https://picsum.photos/2000/3002/"></img>
-        </Col>
-        <Col span={6} offset={1}>
-          <img className="nft_show" src="https://picsum.photos/2000/3003/"></img>
-        </Col>
-        <Col span={6} offset={1}>
-          <img className="nft_show" src="https://picsum.photos/2000/3004/"></img>
-        </Col>
-        <Col span={6} offset={1}>
-          <img className="nft_show" src="https://picsum.photos/2000/3005/"></img>
-        </Col>
-        <Col span={6} offset={1}>
-          <img className="nft_show" src="https://picsum.photos/2000/3006/"></img>
-        </Col>
+        
+        {NFTS}
+        
       </Row>
     </div>
   );
