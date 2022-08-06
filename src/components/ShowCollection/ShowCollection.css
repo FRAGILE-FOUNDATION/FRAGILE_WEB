@@ -1,0 +1,11 @@
+.showCase{
+    padding: 5% 0;
+    background-color: #000;
+    border-radius: 39px;
+}
+a.collect{
+    color: #62688F;
+}
+a.collect span{
+    color: white;
+}
