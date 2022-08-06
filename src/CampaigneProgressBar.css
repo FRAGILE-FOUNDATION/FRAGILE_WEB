@@ -1,0 +1,32 @@
+.campaign-progressBar{
+    height: 13px;
+}
+
+.campaigne-amount{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.campaign-current-donation{
+    margin-top: 1.25vh;
+    color: #5CB0FF;
+
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.campaign-goal{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 120%;
+
+    color: #666666;
+}

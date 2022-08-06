@@ -3,9 +3,10 @@ import './App.css';
 import { useMoralis } from "react-moralis";
 import 'antd/dist/antd.css';
 import 'antd/dist/antd.js';
-import { Typography, Row, Col } from 'antd';
+import { Row, Col } from 'antd';
 import './Home.css';
 import NFT from './NFT';
+import CampaigneProgressBar  from './CampaigneProgressBar';
 
 
 const Home = () => {
@@ -62,10 +63,12 @@ const Home = () => {
   return (
     <div>
       <h1>Moralis Hello World!</h1>
+      <Col span={6} offset={13}>
+        <CampaigneProgressBar amount={2.01} goalAmount={10}/>
+      </Col>
       {buttons}
       {(user) ? user.get("ethAddress") : ''}
       <Row style={{marginBottom:'20px'}}>
-        
         {NFTS}
         
       </Row>
