@@ -5,6 +5,9 @@ const API_ENDPOINT = "https://api.zora.co/graphql";
 const zdk = new ZDK(API_ENDPOINT); // Defaults to Ethereum Mainnet
 
 const getCollectionData = async(collectionAddresses)=>{
+    /**
+     * Function to collect information about a specific NFT collection
+     */
     let args = {
         where: {collectionAddresses: [
             collectionAddresses
@@ -17,10 +20,16 @@ const getCollectionData = async(collectionAddresses)=>{
 }
 
 const useCollectionNFTS = ({collectionAddresses}) =>{
+    /**
+     * Hook to stream NFTs Information of a specific collection
+     */
     const [tokens, setTokens] = useState([]);
     const [collectionData, setCollectionData] = useState();
 
     useEffect(()=>{
+        /**
+         * useEffect to get collection info
+         */
         const fetchData = async()=>{
             let data = await getCollectionData(collectionAddresses);
             setCollectionData(data);
@@ -29,6 +38,9 @@ const useCollectionNFTS = ({collectionAddresses}) =>{
     }, [collectionAddresses]);
 
     useEffect(()=>{
+        /**
+         * useEffect to stream NFT information while tokens array not contain all NFT of the collection
+         */
 
         if(collectionData){
             const totalSupply = collectionData['totalSupply'];
