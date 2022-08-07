@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useQuery } from "@apollo/client";
-import { LOAD_SIMPLE_Query } from "./GraphQL/Queries";
+import { LOAD_NFTs } from "./GraphQL/Queries";
 
-function GetSimpleData() {
-  const { error, data } = useQuery(LOAD_SIMPLE_Query);
+function GetNFTs() {
+  const { error, data } = useQuery(LOAD_NFTs);
   useEffect(() => {
     if (data) {
         console.log(data);
@@ -19,4 +19,4 @@ function GetSimpleData() {
   );
 }
 
-export default GetSimpleData;
+export default GetNFTs;
