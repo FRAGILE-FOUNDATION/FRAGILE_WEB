@@ -9,3 +9,37 @@ a.collect{
 a.collect span{
     color: white;
 }
+
+.drop-header{
+  
+    font-size:80px;
+   
+  }
+
+  .drop-description{
+    width:60%;
+    margin-bottom:30px;
+    margin-top: -40px;
+    color: #666666;
+  }
+
+  .drop-number{
+    font-style: bold;
+    display: inline-block;
+    
+  }
+
+  .drop-topic{
+    background-color: gainsboro;
+    width: 130px;
+    
+    border-radius: 130px;
+    padding: 2px 2px 2px 2px;
+    display: inline-block;
+    margin-left:20px;
+    color:#666666;
+  }
+
+  .drop-info{
+    margin-top: 50px;
+  }

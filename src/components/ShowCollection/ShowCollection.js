@@ -82,11 +82,19 @@ const ShowCollection = () => {
     
 
     return (
+        <div>
+            <div className="drop-info">
+                <span className="drop-number"><b>drop 001</b></span>
+                <div  className="drop-topic"> <b>🇺🇦 War in Ukraine</b></div>
+                <h1 className="drop-header">Ukraine Resistance</h1>
+                <h2 className="drop-description"> Technology can accelerate the efforts tostop the war in Ukraine and prevent worsening of the humanitarian crisis. Help Ukrainians fight the cause of the crisis, not just its consequences. </h2>
+            </div>
         <Row className="showCase">
             <Row>{NFTs}</Row>
             <Row>{NFTs2}</Row>
             <Row>{NFTs3}</Row>
         </Row>
+        </div>
         );
 }
 
