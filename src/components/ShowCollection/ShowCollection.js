@@ -1,16 +1,20 @@
 import React from "react";
-import useCollectionNFTS from '../../tools/GetNFTCollection';
+import {useCollectionNFTS,getCollectionData} from '../../tools/GetNFTCollection';
 import NFT from '../NFT/NFT';
 import { Row, Col } from 'antd';
 import './ShowCollection.css'
 
 const ShowCollection = () => {
-    const collectionAddresses = "0x11595fFB2D3612d810612e34Bc1C2E6D6de55d26";
+    const collectionAddresses = "0xe785E82358879F061BC3dcAC6f0444462D4b5330";
+    const CollectionData = getCollectionData(collectionAddresses);
     const NFTData = useCollectionNFTS({collectionAddresses: collectionAddresses});
     let NFTs, NFTs2, NFTs3 = (<></>);
 
+    //console.log(CollectionData);
 
-    console.log(NFTData);
+
+    //console.log(NFTData);
+
 
     if(NFTData){
         //NFTs = NFTData.map( x => {

@@ -25,6 +25,7 @@ const useCollectionNFTS = ({collectionAddresses}) =>{
      */
     const [tokens, setTokens] = useState([]);
     const [collectionData, setCollectionData] = useState();
+    const [fetchPagination, setFetchPagination] = useState({hasNextPage:true});
 
     useEffect(()=>{
         /**
@@ -44,23 +45,25 @@ const useCollectionNFTS = ({collectionAddresses}) =>{
 
         if(collectionData){
             const totalSupply = collectionData['totalSupply'];
-    
-            const i = tokens.length;
-            if(i <= totalSupply){
-                let tokenId = i.toString();
+
+            if(fetchPagination.hasNextPage){
 
                 let args = {
-                    token: {
-                    address: collectionAddresses,
-                    tokenId: tokenId
+                    where:{
+                        collectionAddresses: collectionAddresses
                     },
-                    includeFullDetails: false // Optional, provides more data on the NFT such as all historical events
+                    pagination:{
+                        after: fetchPagination.endCursor
+                    },
+                    includeFullDetails: true // Optional, provides more data on the NFT such as all historical events
                 }
-                
-                let response = zdk.token(args);
-                response.then((data)=>{
-                    let tokenInfo = data['token']['token'];
-                    setTokens([...tokens, tokenInfo]);
+                console.log(args);
+                let response = zdk.tokens(args);
+                response.then(async(data)=>{
+                    console.log(data);
+
+                    setFetchPagination(data.tokens.pageInfo);
+                    setTokens(tokens.concat(data.tokens.nodes));
                 })
                 
             }
@@ -77,4 +80,11 @@ const useCollectionNFTS = ({collectionAddresses}) =>{
   
 }
 
-export default useCollectionNFTS;
+function jsonConcat(o1, o2) {
+    for (var key in o2) {
+        o1[key] = o2[key];
+    }
+    return o1;
+}
+
+export {useCollectionNFTS, getCollectionData};
