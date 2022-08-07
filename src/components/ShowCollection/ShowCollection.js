@@ -3,6 +3,7 @@ import {useCollectionNFTS,getCollectionData} from '../../tools/GetNFTCollection'
 import NFT from '../NFT/NFT';
 import { Row, Col } from 'antd';
 import './ShowCollection.css'
+import CampaigneProgressBar from "../campaigneProgressBar/CampaigneProgressBar";
 
 const ShowCollection = () => {
     const collectionAddresses = "0xe785E82358879F061BC3dcAC6f0444462D4b5330";
@@ -87,7 +88,29 @@ const ShowCollection = () => {
                 <span className="drop-number"><b>drop 001</b></span>
                 <div  className="drop-topic"> <b>🇺🇦 War in Ukraine</b></div>
                 <h1 className="drop-header">Ukraine Resistance</h1>
-                <h2 className="drop-description"> Technology can accelerate the efforts tostop the war in Ukraine and prevent worsening of the humanitarian crisis. Help Ukrainians fight the cause of the crisis, not just its consequences. </h2>
+               
+                    <div className="sub-info">
+                        <div className="left-info">
+                        <h2 className="drop-description"> Technology can accelerate the efforts tostop the war in Ukraine and prevent worsening of the humanitarian crisis. Help Ukrainians fight the cause of the crisis, not just its consequences. </h2>
+            
+            <CampaigneProgressBar className="progress-bar-component"></CampaigneProgressBar>
+                        </div>
+
+                        <div className="right-info">
+                                                        <div className="drop-organisation-info">
+                                                        <b className="drop-organisation-name"> KOLO </b><br/>
+                                                        <span>Fundraiser • koloua.com • 0xa93b...9bdhd </span><br/><br/>
+                                                        <span>Ukrainian tech-focused non-profit 
+                                Raised $4,000,000 from a community of 2,000 people
+                                100% goes to purchase of optics, air and communications for UA resistance </span>
+                                                    </div>
+
+                        </div>
+                   
+                   
+
+                    </div>
+           
             </div>
         <Row className="showCase">
             <Row>{NFTs}</Row>

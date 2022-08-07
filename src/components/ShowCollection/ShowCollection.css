@@ -2,6 +2,7 @@
     padding: 5% 0;
     background-color: #000;
     border-radius: 39px;
+    margin-top: 5%;
 }
 a.collect{
     color: #62688F;
@@ -17,9 +18,9 @@ a.collect span{
   }
 
   .drop-description{
-    width:60%;
+    width:100%;
     margin-bottom:30px;
-    margin-top: -40px;
+
     color: #666666;
   }
 
@@ -30,16 +31,48 @@ a.collect span{
   }
 
   .drop-topic{
-    background-color: gainsboro;
+ 
     width: 130px;
     
     border-radius: 130px;
     padding: 2px 2px 2px 2px;
     display: inline-block;
     margin-left:20px;
+    border:1px solid gainsboro;
     color:#666666;
   }
 
-  .drop-info{
-    margin-top: 50px;
+  .drop-info {
+    
+  }
+
+ 
+
+  .left-info{
+    width: 55%;
+  }
+
+  .right-info{
+    width: 40%;
+    margin-left: 30px;
+  }
+
+  .sub-info {
+   
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .drop-organisation-info {
+    border-radius: 12px;
+    box-shadow: 0px 3.09742px 20px rgba(0, 0, 0, 0.12);
+    padding: 20px 20px 20px 20px;
+   
+
+  }
+
+  .drop-organisation-name {
+    font-size: 24px;
+
   }

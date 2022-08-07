@@ -1,0 +1,21 @@
+.header-navigation {
+   border-bottom: 1px gainsboro solid;
+   height: 60px;
+   margin-bottom: 160px;
+   padding-top:10px;
+   padding-bottom: 10px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.logo{
+    font-size:24px;
+
+}
+
+.connect-metamask {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  border-color: black;
+}
