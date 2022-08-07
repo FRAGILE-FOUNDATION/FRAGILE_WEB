@@ -104,6 +104,7 @@ const ShowCollection = () => {
                                 Raised $4,000,000 from a community of 2,000 people
                                 100% goes to purchase of optics, air and communications for UA resistance </span>
                                                     </div>
+                                                    
 
                         </div>
                    

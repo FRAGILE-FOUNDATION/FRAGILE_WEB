@@ -72,6 +72,11 @@ a.collect span{
 
   }
 
+  .drop-organisation-info:hover {
+    border:2px solid black;
+
+  }
+
   .drop-organisation-name {
     font-size: 24px;
 
