@@ -1,21 +1,14 @@
 import React, { useEffect, useState } from "react";
-import getCollectionNFTS from '../../tools/GetNFTCollection';
+import useCollectionNFTS from '../../tools/GetNFTCollection';
 import NFT from '../NFT/NFT';
 import { Row, Col } from 'antd';
 import './ShowCollection.css'
 
 const ShowCollection = () => {
-    const collectionAddresses = "0x18c4e3748e4d7e3188301414f5e30479427de851";
-    const [NFTData, setNFTData] = useState();
+    const collectionAddresses = "0x11595fFB2D3612d810612e34Bc1C2E6D6de55d26";
+    const NFTData = useCollectionNFTS({collectionAddresses: collectionAddresses});
     let NFTs, NFTs2, NFTs3 = (<></>);
 
-    useEffect(()=>{
-        async function fetchData(){
-            let data = await getCollectionNFTS({collectionAddresses: collectionAddresses, limit:6})
-            setNFTData(data);
-        }
-        fetchData();
-    },[collectionAddresses]);
 
     console.log(NFTData);
 
