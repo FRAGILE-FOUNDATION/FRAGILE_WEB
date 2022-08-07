@@ -24,53 +24,32 @@ const useCollectionNFTS = ({collectionAddresses}) =>{
      * Hook to stream NFTs Information of a specific collection
      */
     const [tokens, setTokens] = useState([]);
-    const [collectionData, setCollectionData] = useState();
     const [fetchPagination, setFetchPagination] = useState({hasNextPage:true});
-
-    useEffect(()=>{
-        /**
-         * useEffect to get collection info
-         */
-        const fetchData = async()=>{
-            let data = await getCollectionData(collectionAddresses);
-            setCollectionData(data);
-        }
-        fetchData();
-    }, [collectionAddresses]);
 
     useEffect(()=>{
         /**
          * useEffect to stream NFT information while tokens array not contain all NFT of the collection
          */
 
-        if(collectionData){
-            const totalSupply = collectionData['totalSupply'];
+        if(fetchPagination.hasNextPage){
 
-            if(fetchPagination.hasNextPage){
-
-                let args = {
-                    where:{
-                        collectionAddresses: collectionAddresses
-                    },
-                    pagination:{
-                        after: fetchPagination.endCursor
-                    },
-                    includeFullDetails: true // Optional, provides more data on the NFT such as all historical events
-                }
-                console.log(args);
-                let response = zdk.tokens(args);
-                response.then(async(data)=>{
-                    console.log(data);
-
-                    setFetchPagination(data.tokens.pageInfo);
-                    setTokens(tokens.concat(data.tokens.nodes));
-                })
-                
+            let args = {
+                where:{
+                    collectionAddresses: collectionAddresses
+                },
+                pagination:{
+                    after: fetchPagination.endCursor
+                },
+                includeFullDetails: true // Optional, provides more data on the NFT such as all historical events
             }
+            let response = zdk.tokens(args);
+            response.then(async(data)=>{
+                setFetchPagination(data.tokens.pageInfo);
+                setTokens(tokens.concat(data.tokens.nodes));
+            })
+            
         }
-
-        
-    }, [tokens, collectionData, collectionAddresses, fetchPagination]);
+    }, [tokens, collectionAddresses, fetchPagination]);
 
 
     
