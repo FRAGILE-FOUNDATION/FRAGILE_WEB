@@ -12,8 +12,6 @@ const ShowCollection = () => {
     let NFTs, NFTs2, NFTs3 = (<></>);
 
     //console.log(CollectionData);
-
-
     //console.log(NFTData);
 
     const NFTsClass1 = NFTData.filter(x => {
@@ -99,7 +97,7 @@ const ShowCollection = () => {
                         <div className="right-info">
                                                         <div className="drop-organisation-info">
                                                         <b className="drop-organisation-name"> KOLO </b><br/>
-                                                        <span>Fundraiser • koloua.com • 0xa93b...9bdhd </span><br/><br/>
+                                                        <span>git@github.com:FRAGILE-FOUNDATION/FRAGILE_WEB.gitFundraiser • koloua.com • 0xa93b...9bdhd </span><br/><br/>
                                                         <span>Ukrainian tech-focused non-profit 
                                 Raised $4,000,000 from a community of 2,000 people
                                 100% goes to purchase of optics, air and communications for UA resistance </span>
