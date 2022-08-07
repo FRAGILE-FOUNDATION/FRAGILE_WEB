@@ -1,5 +1,5 @@
 import { ZDK } from "@zoralabs/zdk";
-import React, { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 
 const API_ENDPOINT = "https://api.zora.co/graphql";
 const zdk = new ZDK(API_ENDPOINT); // Defaults to Ethereum Mainnet
@@ -67,7 +67,7 @@ const useCollectionNFTS = ({collectionAddresses}) =>{
         }
 
         
-    }, [tokens, collectionData]);
+    }, [tokens, collectionData, collectionAddresses]);
 
 
     

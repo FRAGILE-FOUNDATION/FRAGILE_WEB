@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useCollectionNFTS from '../../tools/GetNFTCollection';
 import NFT from '../NFT/NFT';
 import { Row, Col } from 'antd';
