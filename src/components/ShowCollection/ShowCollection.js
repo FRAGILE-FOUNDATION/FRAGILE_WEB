@@ -15,6 +15,14 @@ const ShowCollection = () => {
 
     //console.log(NFTData);
 
+    const NFTsClass1 = NFTData.filter(x => {
+        const Type = x.token.attributes.filter(x=>x.traitType=="Mouth")[0]['value']
+        if(Type=="Surprised"){
+            return x;
+        }
+    })
+    console.log(NFTsClass1);
+
 
     if(NFTData){
         //NFTs = NFTData.map( x => {
