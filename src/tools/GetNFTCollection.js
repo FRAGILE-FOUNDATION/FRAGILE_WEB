@@ -70,7 +70,7 @@ const useCollectionNFTS = ({collectionAddresses}) =>{
         }
 
         
-    }, [tokens, collectionData, collectionAddresses]);
+    }, [tokens, collectionData, collectionAddresses, fetchPagination]);
 
 
     
