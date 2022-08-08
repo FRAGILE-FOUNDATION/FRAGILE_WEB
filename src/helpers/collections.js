@@ -65,6 +65,29 @@ export const networkCollections = {
       addrs: "0x1A92f7381B9F03921564a437210bB9396471050C",
     },
   ],
+  "0x4": [
+    {
+      image: "",
+      name: "Paladium",
+      addrs: "0x099cd1559076B24505C653b7dA155d0cC17bB8c9",
+    },
+    {
+      image: "",
+      name: "Rhodium",
+      addrs: "0x44177241427655984ab86ae605b5b9ec2106addc",
+    },
+    {
+      image: "",
+      name: "Iridium",
+      addrs: "0xadcc0d343c818151adf1502a535faed7ae1cdd49",
+    },
+    {
+      image: "",
+      name: "test",
+      addrs: "0xdf176bca4ada8c11069b773319a0d963b49d3854",
+    },
+  ],
+
 };
 
 export const getCollectionsByChain = (chain) => networkCollections[chain];

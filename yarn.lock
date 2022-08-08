@@ -1749,6 +1749,23 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
+"@manifoldxyz/libraries-solidity@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@manifoldxyz/libraries-solidity/-/libraries-solidity-1.0.2.tgz#c63284d910ff6e7af3e1954a54dd126abd084518"
+  integrity sha512-qdCLBD5CicgT6UtDB1fED1kpJfgDqIB6WahtsfZ23ha/nYEBXKHJZ1urIHaIeCOdw8cTi6fMQbQWrld4V1S7dQ==
+  dependencies:
+    "@openzeppelin/contracts" "^4.2.0"
+    "@openzeppelin/contracts-upgradeable" "^4.2.0"
+
+"@manifoldxyz/royalty-registry-solidity@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@manifoldxyz/royalty-registry-solidity/-/royalty-registry-solidity-1.0.9.tgz#4d3516338c8b351e1e61d5a597ec532574beed6d"
+  integrity sha512-Cv38ROezkl6J8lizyPlEmPoAvLiRcO31OnWe/Jept0mNk7oygrPZrfG07OMfwphn+dOFxmszQTns7AJRQfxMBA==
+  dependencies:
+    "@manifoldxyz/libraries-solidity" "^1.0.2"
+    "@openzeppelin/contracts" "^4.3.2"
+    "@openzeppelin/contracts-upgradeable" "^4.3.2"
+
 "@metamask/detect-provider@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@metamask/detect-provider/-/detect-provider-1.2.0.tgz#3667a7531f2a682e3c3a43eaf3a1958bdb42a696"
@@ -1796,6 +1813,16 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
+"@openzeppelin/contracts-upgradeable@^4.2.0", "@openzeppelin/contracts-upgradeable@^4.3.2":
+  version "4.7.2"
+  resolved "https://registry.yarnpkg.com/@openzeppelin/contracts-upgradeable/-/contracts-upgradeable-4.7.2.tgz#414096e21f048200cbb7ad4fe4c6de2e822513bf"
+  integrity sha512-3dgc6qVmFch/uOmlmKnw5/v3JxwXcZD4T10/9CI1OUbX8AqjoZrBGKfxN1z3QxnIXRU/X31/BItJezJSDDTe7Q==
+
+"@openzeppelin/contracts@^4.2.0", "@openzeppelin/contracts@^4.3.2", "@openzeppelin/contracts@^4.5.0":
+  version "4.7.2"
+  resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.7.2.tgz#7587416fe2d35abf574193515b8971bfe9f64bc7"
+  integrity sha512-4n/JL9izql8303mPqPdubuna/DWEMbmOzWYUWyCPhjhiEr2w3nQrjE7vZz1fBF+wzzP6dZbIcsgqACk53c9FGA==
+
 "@pmmmwh/react-refresh-webpack-plugin@0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.4.3.tgz#1eec460596d200c0236bf195b078a5d1df89b766"
@@ -1807,6 +1834,11 @@
     native-url "^0.2.6"
     schema-utils "^2.6.5"
     source-map "^0.7.3"
+
+"@rari-capital/solmate@^6.2.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@rari-capital/solmate/-/solmate-6.4.0.tgz#c6ee4110c8075f14b415e420b13bd8bdbbc93d9e"
+  integrity sha512-BXWIHHbG5Zbgrxi0qVYe0Zs+bfx+XgOciVUACjuIApV0KzC0kY8XdO1higusIei/ZKCC+GUKdcdQZflxYPUTKQ==
 
 "@rollup/plugin-node-resolve@^7.1.1":
   version "7.1.3"
@@ -2705,6 +2737,15 @@
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
+
+"@zoralabs/v3@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@zoralabs/v3/-/v3-1.0.10.tgz#6b72db68dd50a5b03d0a6b1c16924ac67432db09"
+  integrity sha512-l6WibZXlACs4SWTrHf8LRnpkq9yomLdQWGlCAcDsXCFjf2YJr0PDK5p5oLxgTxeeFq3uWiLdc5HTE1WyXy7q2A==
+  dependencies:
+    "@manifoldxyz/royalty-registry-solidity" "^1.0.9"
+    "@openzeppelin/contracts" "^4.5.0"
+    "@rari-capital/solmate" "^6.2.0"
 
 abab@^2.0.3, abab@^2.0.5:
   version "2.0.5"

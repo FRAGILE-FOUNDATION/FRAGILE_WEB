@@ -11,6 +11,7 @@ export const useNFTTokenIds = (addr) => {
   const [NFTTokenIds, setNFTTokenIds] = useState([]);
   const [totalNFTs, setTotalNFTs] = useState();
   const [fetchSuccess, setFetchSuccess] = useState(true);
+  console.log("chainid", chainId);
   const {
     fetch: getNFTTokenIds,
     data,
